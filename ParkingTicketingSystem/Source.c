@@ -26,6 +26,8 @@ void check();
 void perhour();
 void perday();
 void permonth();
+void changetype();
+void changedate();
 
 int main(int argc, char const *argv[])
 {
@@ -122,8 +124,56 @@ void permonth()
 
 void edit()
 {
+	int choice;
 	printf("1. Change ticket type\n");
 	printf("2. Change ticket date\n");
+	scanf("%d", &choice);
+
+	printf("%d\n", choice);
+	switch (choice) {
+	case 1:
+		changetype();
+		break;
+	case 2:
+		changedate();
+		break;
+	case 3:
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
+}
+
+void changetype()
+{
+	int choice;
+	printf("choose ticket type that you want to chane\n");
+	printf("1. per hour\n");
+	printf("2. per day\n");
+	printf("3. per month\n");
+	scanf("%d", &choice);
+
+	printf("%d\n", choice);
+	switch (choice) {
+	case 1:
+		perhour();
+		break;
+	case 2:
+		perday();
+		break;
+	case 3:
+		permonth();
+		break;
+	case 4:
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
+}
+
+void changedate()
+{
+	printf("enter the date\n");
 }
 
 void cancel()
