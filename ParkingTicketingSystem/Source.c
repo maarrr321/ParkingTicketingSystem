@@ -23,7 +23,9 @@ void buy();
 void edit();
 void cancel();
 void check();
-
+void perhour();
+void perday();
+void permonth();
 
 int main(int argc, char const *argv[])
 {
@@ -76,24 +78,54 @@ int main(int argc, char const *argv[])
 
 void buy()
 {
+	int choice;
+
 	printf("Purchase Ticket\n");
 	printf("1. per hour\n");
 	printf("2. per day\n");
 	printf("3. per month\n");
-	
-	// switch
-	perhour();
+
+	scanf("%d", &choice);
+
+	switch (choice) {
+	case 1:
+		perhour();
+		break;
+	case 2:
+		perday();
+		break;
+	case 3:
+		permonth();
+		break;
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
 }
 
 void perhour()
 {
+	printf("enter number of hours\n");
+	
+}
+
+void perday()
+{
+	printf("enter number of days");
+}
+
+void permonth()
+{
+	printf("enter number of months");
 
 }
+
 void edit()
 {
 	printf("1. Change ticket type\n");
 	printf("2. Change ticket date\n");
 }
+
 void cancel()
 {
 	printf("1. Cancel ticket\n");
