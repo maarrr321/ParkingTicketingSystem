@@ -24,6 +24,7 @@ void edit();
 void cancel();
 void check();
 
+
 int main(int argc, char const *argv[])
 {
 	int currentDay, currentMonth, currentYear;
@@ -79,6 +80,13 @@ void buy()
 	printf("1. per hour\n");
 	printf("2. per day\n");
 	printf("3. per month\n");
+	
+	// switch
+	perhour();
+}
+
+void perhour()
+{
 
 }
 void edit()
