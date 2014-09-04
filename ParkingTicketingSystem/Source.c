@@ -112,6 +112,7 @@ void buy()
 void open()
 {
 	int choice;
+
 	printf("1. per hour\n");
 	printf("2. per day\n");
 	printf("3. per month\n");
