@@ -23,6 +23,9 @@ void buy();
 void edit();
 void cancel();
 void check();
+void open();
+void covered();
+void designated();
 void perhour();
 void perday();
 void permonth();
@@ -83,6 +86,32 @@ void buy()
 	int choice;
 
 	printf("Purchase Ticket\n");
+	printf("1. Open Area\n");
+	printf("2. Covered Area\n");
+	printf("3. Designated Area\n");
+	
+
+	scanf("%d", &choice);
+
+	switch (choice) {
+	case 1:
+		open();
+		break;
+	case 2:
+		covered();
+		break;
+	case 3:
+		designated();
+		break;
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
+}
+
+void open()
+{
+	int choice;
 	printf("1. per hour\n");
 	printf("2. per day\n");
 	printf("3. per month\n");
@@ -105,20 +134,71 @@ void buy()
 	}
 }
 
+void covered()
+{
+	int choice;
+	printf("1. per hour\n");
+	printf("2. per day\n");
+	printf("3. per month\n");
+
+	scanf("%d", &choice);
+
+	switch (choice) {
+	case 1:
+		perhour();
+		break;
+	case 2:
+		perday();
+		break;
+	case 3:
+		permonth();
+		break;
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
+}
+
+void designated()
+{
+	int choice;
+
+	printf("1. per hour\n");
+	printf("2. per day\n");
+	printf("3. per month\n");
+
+	scanf("%d", &choice);
+
+	switch (choice) {
+
+	case 1:
+		perhour();
+		break;
+	case 2:
+		perday();
+		break;
+	case 3:
+		permonth();
+		break;
+	default:
+		printf("Invalid Menu\n");
+		break;
+	}
+}
 void perhour()
 {
-	printf("enter number of hours\n");
+	printf("Enter number of hours\n");
 	
 }
 
 void perday()
 {
-	printf("enter number of days");
+	printf("Enter number of days");
 }
 
 void permonth()
 {
-	printf("enter number of months");
+	printf("Enter number of months");
 
 }
 
@@ -173,7 +253,7 @@ void changetype()
 
 void changedate()
 {
-	printf("enter the date\n");
+	printf("Enter the date\n");
 }
 
 void cancel()
