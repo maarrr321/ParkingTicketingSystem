@@ -25,10 +25,10 @@ void cancel();
 void check();
 void open();
 void covered();
-void designated();
 void perhour();
 void perday();
 void permonth();
+void designated();
 void changetype();
 void changedate();
 
@@ -137,20 +137,20 @@ void open()
 	{
 		float duration, num1 = 1.00;
 		scanf("%f", &duration);
-		printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1);
+		printf("You have to pay the total of " "%f" " RM\n", duration, num1, duration*num1);
 
 	}
 	else if (choice == 2)
 	{
-		float duration, num2 = 5.00;
-		scanf("%f", &duration);
-		printf("You have to pay the total of " "%.1f" " RM\n", duration, num2, duration*num2);
+		float day, num2 = 5.00;
+		scanf("%f", &day);
+		printf("You have to pay the total of " "%f" " RM\n", day, num2, day*num2);
 	}
 	else
 	{
-		float duration, num3 = 60.00;
-		scanf("%f", &duration);
-		printf("You have to pay the total of " "%.1f" " RM\n", duration, num3, duration*num3);
+		float month, num3 = 60.00;
+		scanf("%f", &month);
+		printf("You have to pay the total of " "%f" " RM\n", month, num3, month*num3);
 	}
 }
 
@@ -204,29 +204,12 @@ void designated()
 		printf("Invalid Menu\n");
 		break;
 	}
-}
-void perhour()
-{
-	float duration, num1 = 1.00;
-	printf("Enter number of hours\n");
-	scanf("%f", &duration);
-	printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1 );
-
+	if (choice == 1)
+	{
+		printf("Sorry! the ticket is not available\n");
+	}
 }
 
-void perday()
-{
-	float duration, num1 = 5.00;
-	printf("Enter number of days\n");
-	scanf("%f", &duration);
-	printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1);
-}
-
-void permonth()
-{
-	printf("Enter number of months\n");
-
-}
 
 void edit()
 {
@@ -254,32 +237,60 @@ void changetype()
 {
 	int choice;
 	printf("choose ticket type that you want to chane\n");
-	printf("1. per hour\n");
-	printf("2. per day\n");
-	printf("3. per month\n");
+	printf("1. Opened area\n");
+	printf("2. Covered area\n");
+	printf("3. Designated\n");
 	scanf("%d", &choice);
 
 	printf("%d\n", choice);
 	switch (choice) {
 	case 1:
-		perhour();
+		open();
 		break;
 	case 2:
-		perday();
+		covered();
 		break;
 	case 3:
-		permonth();
+		designated();
 		break;
 	case 4:
 	default:
 		printf("Invalid Menu\n");
 		break;
 	}
+	if (choice == 1)
+	{
+		printf("choose the duration :\n");
+		printf("1. per hour\n");
+		printf("2. per day\n");
+		printf("3. per month\n");
+	}
+	else if (choice == 2)
+	{
+		printf("choose the duration :\n");
+		printf("1. per hour\n");
+		printf("2. per day\n");
+		printf("3. per month\n");
+	}
+	else if (choice == 3)
+	{
+		printf("choose the duration :\n");
+		printf("1. per hour\n");
+		printf("2. per day\n");
+		printf("3. per month\n");
+	}
 }
 
 void changedate()
 {
-	printf("Enter the date\n");
+	int Date;
+	int month;
+	int year;
+		printf("Enter ticket's date : \n)");
+	scanf("%d-%d-%d", &Date, &month, &year);
+	printf("Enter the updated date : \n");
+	scanf("%d-%d-%d", &Date, &month, &year);
+
 }
 
 void cancel()
