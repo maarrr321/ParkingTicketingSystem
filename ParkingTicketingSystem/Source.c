@@ -89,7 +89,7 @@ void buy()
 	printf("1. Open Area\n");
 	printf("2. Covered Area\n");
 	printf("3. Designated Area\n");
-	
+
 
 	scanf("%d", &choice);
 
@@ -132,6 +132,25 @@ void open()
 	default:
 		printf("Invalid Menu\n");
 		break;
+	}
+	if (choice == 1)
+	{
+		float duration, num1 = 1.00;
+		scanf("%f", &duration);
+		printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1);
+
+	}
+	else if (choice == 2)
+	{
+		float duration, num2 = 5.00;
+		scanf("%f", &duration);
+		printf("You have to pay the total of " "%.1f" " RM\n", duration, num2, duration*num2);
+	}
+	else
+	{
+		float duration, num3 = 60.00;
+		scanf("%f", &duration);
+		printf("You have to pay the total of " "%.1f" " RM\n", duration, num3, duration*num3);
 	}
 }
 
@@ -188,18 +207,24 @@ void designated()
 }
 void perhour()
 {
+	float duration, num1 = 1.00;
 	printf("Enter number of hours\n");
-	
+	scanf("%f", &duration);
+	printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1 );
+
 }
 
 void perday()
 {
-	printf("Enter number of days");
+	float duration, num1 = 5.00;
+	printf("Enter number of days\n");
+	scanf("%f", &duration);
+	printf("You have to pay the total of " "%.1f" " RM\n", duration, num1, duration*num1);
 }
 
 void permonth()
 {
-	printf("Enter number of months");
+	printf("Enter number of months\n");
 
 }
 
