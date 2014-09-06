@@ -5,19 +5,27 @@ static const char name[10][20] = {
 	"Ariel", "Beca", "Caroline", "Daphne",
 	"Faustine", "Gretel", "Hercules",
 	"Ignatius", "Jacquard", "Keith" };
+	
 static const int ic[10] = {
 	864378, 854653, 234890, 975384, 986574,
 	745235, 436578, 970874, 162789, 686664 };
+	
 static const char contact[10][13] = {
 	"016284799", "016284799", "016284799", "016284799", "016284799",
 	"016284799", "016284799", "016284799", "016284799", "016284799" };
+
 static const int ticketType[10] = {
 	0, 1, 1, 2, 0,		// 0 : per hour, 1 : per day
 	-1, 0, 1, 0, -1 };	// 2 : per month, -1 : invalid ticket
-static const int day[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static const int month[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static const int year[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+static int day[10] 		= { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+static int month[10]	= { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+static int year[10] 	= { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+static const int fee[4][4] =  {	{ 0, 0, 0, 0   },
+								{ 0, 1, 5, 60  },
+								{ 0, 2, 8, 80  },
+								{ 0, 0, 0, 120 } };
 
 void buy();
 void edit();
@@ -83,133 +91,20 @@ int main(int argc, char const *argv[])
 
 void buy()
 {
-	int choice;
+	int type, length, duration;
 
 	printf("Purchase Ticket\n");
 	printf("1. Open Area\n");
 	printf("2. Covered Area\n");
 	printf("3. Designated Area\n");
-
-
-	scanf("%d", &choice);
-
-	switch (choice) {
-	case 1:
-		open();
-		break;
-	case 2:
-		covered();
-		break;
-	case 3:
-		designated();
-		break;
-	default:
-		printf("Invalid Menu\n");
-		break;
-	}
+	printf("Enter ticket type (1-3): ");
+	scanf("%d", &type);
+	
+	printf("Enter duration (h/d/m): ");
+	scanf("%d %c", &length, &duration);
+	
+	printf("Total is: %d\n", length * fee[type][duration]);
 }
-
-void open()
-{
-	int choice;
-
-	printf("1. per hour\n");
-	printf("2. per day\n");
-	printf("3. per month\n");
-
-	scanf("%d", &choice);
-
-	switch (choice) {
-	case 1:
-		perhour();
-		break;
-	case 2:
-		perday();
-		break;
-	case 3:
-		permonth();
-		break;
-	default:
-		printf("Invalid Menu\n");
-		break;
-	}
-	if (choice == 1)
-	{
-		float duration, num1 = 1.00;
-		scanf("%f", &duration);
-		printf("You have to pay the total of " "%f" " RM\n", duration, num1, duration*num1);
-
-	}
-	else if (choice == 2)
-	{
-		float day, num2 = 5.00;
-		scanf("%f", &day);
-		printf("You have to pay the total of " "%f" " RM\n", day, num2, day*num2);
-	}
-	else
-	{
-		float month, num3 = 60.00;
-		scanf("%f", &month);
-		printf("You have to pay the total of " "%f" " RM\n", month, num3, month*num3);
-	}
-}
-
-void covered()
-{
-	int choice;
-	printf("1. per hour\n");
-	printf("2. per day\n");
-	printf("3. per month\n");
-
-	scanf("%d", &choice);
-
-	switch (choice) {
-	case 1:
-		perhour();
-		break;
-	case 2:
-		perday();
-		break;
-	case 3:
-		permonth();
-		break;
-	default:
-		printf("Invalid Menu\n");
-		break;
-	}
-}
-
-void designated()
-{
-	int choice;
-
-	printf("1. per hour\n");
-	printf("2. per day\n");
-	printf("3. per month\n");
-
-	scanf("%d", &choice);
-
-	switch (choice) {
-
-	case 1:
-		perhour();
-		break;
-	case 2:
-		perday();
-		break;
-	case 3:
-		permonth();
-		break;
-	default:
-		printf("Invalid Menu\n");
-		break;
-	}
-	if (choice == 1)
-	{
-		printf("Sorry! the ticket is not available\n");
-	}
-}
-
 
 void edit()
 {

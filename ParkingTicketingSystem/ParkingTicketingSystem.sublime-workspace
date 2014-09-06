@@ -1,0 +1,430 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ge",
+				"gen_primes	function"
+			],
+			[
+				"sum",
+				"sumDivisibleBy	function"
+			],
+			[
+				"set",
+				"setColor"
+			],
+			[
+				"re",
+				"Rectangle"
+			],
+			[
+				"get",
+				"getMonthlyInterestRate"
+			],
+			[
+				"tr",
+				"try	Try/Except"
+			],
+			[
+				"el",
+				"else	keyword"
+			],
+			[
+				"csv",
+				"csv_file"
+			],
+			[
+				"zip",
+				"zipfile	module"
+			],
+			[
+				"file",
+				"file_name	statement"
+			],
+			[
+				"cl",
+				"client"
+			],
+			[
+				"se",
+				"setPlaceStatus"
+			],
+			[
+				"number",
+				"numberOfGuest"
+			],
+			[
+				"status",
+				"status"
+			],
+			[
+				"G",
+				"GradeBook"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/pypy.sublime-build",
+	"command_palette":
+	{
+		"height": 138.0,
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"toggle lin",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Quick Commit"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"des",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"orig",
+				"Origami: Clone File to Pane on the Right"
+			],
+			[
+				"create rig",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"upload",
+				"Sublimall: Upload"
+			],
+			[
+				"ana",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"close ",
+				"File: Close All"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimall",
+				"Sublimall: Upload"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"ssja",
+				"Set Syntax: Java"
+			],
+			[
+				"oride",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"destrpan",
+				"Origami: Destroy Pane Above"
+			],
+			[
+				"origami",
+				"Origami: Create Pane with File on the Right"
+			],
+			[
+				"ssc+",
+				"Set Syntax: C++"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc++",
+				"Set Syntax: C++"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 169.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/geraldi/Source/Repos/ParkingTicketingSystem/ParkingTicketingSystem/Source.c",
+		"/C/Program Files (x86)/The SIMS 4 Deluxe Edition/Game/Bin/The.Sims.4.Launcher.par",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Git/Git.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/geraldi/Dropbox/Development/ProjectEuler/3.py",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/pypy.sublime-build",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/3.py",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/3.py~",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/1.txt",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/2.py",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/test.py",
+		"/C/Users/geraldi/Dropbox/Development/Project Euler/1.py",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Terminal.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Terminal/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/geraldi/Dropbox/Development/Java/Account.java",
+		"/C/Users/geraldi/Dropbox/Development/Java/Rectangle.java",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/class.sublime-snippet",
+		"/C/Program Files/Sublime Text 3/Data/Packages/GoSublime/USAGE.md",
+		"/C/Program Files/Sublime Text 3/Data/Packages/GoSublime/CHANGELOG.md",
+		"/C/Users/geraldi/Downloads/liteidex23.2.windows/liteide/README.md",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/Sublimall.sublime-settings",
+		"/C/Users/geraldi/Dropbox/Development/Python/timetable.py",
+		"/C/Users/geraldi/Desktop/list.txt",
+		"/C/Users/geraldi/Desktop/list2.txt",
+		"/C/Users/geraldi/Desktop/text.txt",
+		"/C/Users/geraldi/Documents/Visual Studio 2013/Projects/MvcMovie/MvcMovie/Controllers/HelloWorldController.cs",
+		"/C/Users/geraldi/Documents/Visual Studio 2013/Projects/MvcMovie/MvcMovie/favicon.ico",
+		"/C/Users/geraldi/Dropbox/Source.c",
+		"/C/Users/geraldi/Documents/School Stuffs/3/Database and Web Database Systems/Assignment Samples/DWDS Individual Assignment (TP018042-ANG YANG YI)/Program/_UpgradeReport_Files/UpgradeReport.css",
+		"/C/Users/geraldi/Desktop/books.py",
+		"/C/Users/geraldi/Desktop/test.py",
+		"/C/Users/geraldi/Desktop/calendar.dat",
+		"/C/Users/geraldi/Downloads/client_secret_184268952127-kedq6835ooa1iglkbvc8of878rgrne1c.apps.googleusercontent.com.json",
+		"/C/Users/geraldi/Dropbox/NetBeansProjects/ParkingSystem/src/core/InsertDriver.java",
+		"/C/Users/geraldi/Dropbox/NetBeansProjects/ParkingSystem/ParkingSystem.sublime-project",
+		"/C/Users/geraldi/Dropbox/NetBeansProjects/ParkingSystem/src/core/ParkingSpace.java",
+		"/C/Users/geraldi/Dropbox/NetBeansProjects/ParkingSystem/src/core/QueryDriver.java",
+		"/C/Users/geraldi/Dropbox/NetBeansProjects/ParkingSystem/src/core/Student.java",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Sublimall/Sublimall.sublime-settings",
+		"/C/UniServerZ/www/sql/index.php",
+		"/C/Users/geraldi/Desktop/Web Development.lnk",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/core/InsertDriver.java",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/UI/CRUD.java",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/UI/CRUD.form",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/UI/LoginUI.java",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/core/ParkingSpace.java",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/core/Student.java",
+		"/C/Users/geraldi/Documents/NetBeansProjects/ParkingSystem/src/core/QueryDriver.java",
+		"/C/Users/geraldi/Downloads/public_meepo_scripts/normal.cfg",
+		"/C/Users/geraldi/Downloads/public_meepo_scripts/meep_config.cfg",
+		"/C/Users/geraldi/Downloads/public_meepo_scripts/autoexec.cfg",
+		"/C/Users/geraldi/Documents/Visual Studio 2013/Projects/YumsCafe/YumsCafe/Place.h",
+		"/C/Users/geraldi/Documents/Visual Studio 2013/Projects/YumsCafe/YumsCafe/Place.cpp",
+		"/C/Users/geraldi/Documents/Visual Studio 2013/Projects/YumsCafe/YumsCafe/main.cpp",
+		"/C/Users/geraldi/Documents/School Stuffs/Introduction to C Programming/ICP ASSIGNMENT/main.c",
+		"/C/Program Files/Sublime Text 3/Data/Packages/User/cpp.sublime-build",
+		"/C/Users/geraldi/Desktop/C++/YumsCafe/main.cpp",
+		"/C/Users/geraldi/Desktop/C++/YumsCafe/Place.cpp",
+		"/C/Users/geraldi/Desktop/C++/YumsCafe/Place.h",
+		"/C/Users/geraldi/Desktop/C++/GradeBook.cpp",
+		"/C/Users/geraldi/Desktop/C++/hello/main.cpp",
+		"/C/Users/geraldi/Desktop/C++/factorials.cpp",
+		"/C/Users/geraldi/Desktop/C++/hello.cpp",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Program Files/Sublime Text 3/Data/Packages/Alignment/Base File.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"x",
+			"terminal",
+			"tab_size",
+			"rulers",
+			"theme\":",
+			"flatland",
+			"caret",
+			"swap_line",
+			"alignment",
+			"indent",
+			"browser",
+			";",
+			"csv",
+			"f",
+			"request",
+			"ctrl",
+			"LocalDate",
+			"DateTime",
+			"placeStatus",
+			"PlaceStatus",
+			"placeStatus",
+			"PlaceStatus",
+			"placeStatus",
+			"PlaceStatus",
+			"Status",
+			"Place"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GoSublime-output":
+	{
+		"height": 110.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 110.0
+	},
+	"output.exec":
+	{
+		"height": 110.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 110.0
+	},
+	"project": "ParkingTicketingSystem.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
