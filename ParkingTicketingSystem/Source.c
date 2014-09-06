@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static char name[10][20] = { "Ariel", "Beca",
-								   "Caroline", "Daphne",
-								   "Faustine", "Gretel", 
-								   "Hercules", "Ignatius",
-								   "Jacquard", "Keith" };
-	
+static char name[10][20] = {"Ariel", "Beca",
+							"Caroline", "Daphne",
+							"Faustine", "Gretel", 
+							"Hercules", "Ignatius",
+							"Jacquard", "Keith" };
+							
 static const int ic[10] = {	864378, 854653, 
 							234890, 975384, 
 							986574,	745235, 
@@ -31,11 +31,13 @@ static int year[10] 	  = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 void buy(int);
 void edit();
-void changetype();
-void changedate();
 
 int main(int argc, char const *argv[])
 {
+	FILE* f = fopen("data.txt", "w+");
+	for (int i=0; i<10;i++)
+		fscanf(f, "%d %d %d", day[i], month[i], year[i]);
+	
 	int currentDay, currentMonth, currentYear;
 	int user;
 	int choice;
@@ -58,7 +60,8 @@ int main(int argc, char const *argv[])
 	scanf("%d", &choice);
 
 	printf("%d\n", choice);
-	switch (choice) {
+	switch (choice)
+	{
 	case 1:
 		buy(user-1);
 		break;
@@ -77,15 +80,17 @@ int main(int argc, char const *argv[])
 		printf("Invalid Menu\n");
 		break;
 	}
-
-	system("pause");
+	
+	for (int i=0; i<10;i++)
+		fprintf(f, "%d %d %d\n", day[i], month[i], year[i]);
+	fclose(f);
 	return 0;
 }
 
 
 void buy(int user)
 {
-	int length, duration;
+	int length, duration, choice;
 
 	printf("Purchase Ticket\n");
 	printf("1. Open Area\n");
@@ -95,23 +100,32 @@ void buy(int user)
 	scanf("%d", &ticketType[user]);
 	
 	printf("Enter duration (h/d/m): ");
-	scanf("%d", &length);
+	scanf("%d %c", &length, &choice);
 	
-	fflush(stdin);
-	switch(getchar()) 
+	
+	switch(choice)
 	{
 		case 'h':
-			duration = 1;
+			duration = 0;
+			day[user] = currentDay+1;
 			break;
 		case 'd':
-			duration = 2;
+			day[user] = currentDay+length;
+			duration = 1;
 			break;
 		case 'm':
-			duration = 3;
+			duration = 2;
 			break;
+		default:
+			printf("Invalid input\n");
+			exit(1);
 	}
-
-	printf("Total is: %d\n", length * fee[ticketType[user]][duration]);
+	if (ticketType[user] == 3)
+		if (duration != 2)
+			printf("Ticket is not available...");
+	
+	month[user] = currentMonth;
+	printf("Total is: %d\n", length * fee[ticketType[user]-1][duration]);
 }
 
 void edit()
