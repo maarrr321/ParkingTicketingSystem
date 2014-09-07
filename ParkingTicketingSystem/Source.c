@@ -1,56 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-static char name[10][20] = {"Ariel", "Beca",
-							"Caroline", "Daphne",
-							"Faustine", "Gretel", 
-							"Hercules", "Ignatius",
-							"Jacquard", "Keith" };
-							
-static const int ic[10] = {	864378, 854653, 
-							234890, 975384, 
-							986574,	745235, 
-							436578, 970874, 
-							162789, 686664 };
-	
-static const char contact[10][13] = { "016284799", "016284799",
-									  "016284799", "016284799",
-									  "016284799", "016284799",
-									  "016284799", "016284799",
-									  "016284799", "016284799" };
+#define SIZE 256
 
-static const int fee[3][3] = { { 1, 5, 60  },
-							   { 2, 8, 80  },
-							   { 0, 0, 120 } };
-								
-static int ticketType[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };	
-static int day[10] 		  = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static int month[10]	  = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static int year[10] 	  = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-
+struct employee {
+	int ic;
+	char name[20];
+	char contact[13];
+	int ticketType;
+	struct tm *expdate;
+} Employees[10] = {
+	{864378, "Ariel", "016284799", 0, NULL},
+	// {},
+	// {},
+	// {},
+	// {},
+	// {},
+	// {},
+	// {},
+	// {},
+	// {}
+};
+static const int fee[3][3] = {{1, 5, 60}, {2, 8, 80},{0, 0, 120}};
 
 void buy(int);
-void edit();
+void edit(int);
+void delete(int);
 
 int main(int argc, char const *argv[])
-{
-	FILE* f = fopen("data.txt", "w+");
-	for (int i=0; i<10;i++)
-		fscanf(f, "%d %d %d", day[i], month[i], year[i]);
+{	
+	char buffer[SIZE];
+	time_t curtime;
+	struct tm *loctime;
 	
-	int currentDay, currentMonth, currentYear;
+	// disini load.
 	int user;
 	int choice;
-
+	
+	curtime = time(NULL);
+	loctime = localtime (&curtime);
+	strftime (buffer, SIZE, "%d-%m-%Y", loctime);
+	printf("%s\n", buffer);
+	
 	printf("Welcome\n");
-	printf("Enter today's date: (eg: 03-05-2014)");
-	scanf("%d-%d-%d", &currentDay, &currentMonth, &currentYear);
-
 	printf("Enter your ID: ");
 	scanf("%d", &user);
 
-	printf("Welcome %s\n", name[user - 1]);
-	printf("Contact Number: %s\n", contact[user - 1]);
+	printf("Welcome %s\n", Employees[user-1].name);
 	printf("\n1. Purchase new ticket\n");
 	printf("2. Edit ticket type\n");
 	printf("3. Cancel ticket\n");
@@ -66,7 +63,7 @@ int main(int argc, char const *argv[])
 		buy(user-1);
 		break;
 	case 2:
-		edit();
+		edit(user-1);
 		break;
 	case 3:
 		// cancel();
@@ -81,9 +78,7 @@ int main(int argc, char const *argv[])
 		break;
 	}
 	
-	for (int i=0; i<10;i++)
-		fprintf(f, "%d %d %d\n", day[i], month[i], year[i]);
-	fclose(f);
+	// disini save.
 	return 0;
 }
 
@@ -97,7 +92,7 @@ void buy(int user)
 	printf("2. Covered Area\n");
 	printf("3. Designated Area\n");
 	printf("Enter ticket type (1-3): ");
-	scanf("%d", &ticketType[user]);
+	scanf("%d", &(Employees[user].ticketType));
 	
 	printf("Enter duration (h/d/m): ");
 	scanf("%d %c", &length, &choice);
@@ -107,10 +102,8 @@ void buy(int user)
 	{
 		case 'h':
 			duration = 0;
-			day[user] = currentDay+1;
 			break;
 		case 'd':
-			day[user] = currentDay+length;
 			duration = 1;
 			break;
 		case 'm':
@@ -120,32 +113,58 @@ void buy(int user)
 			printf("Invalid input\n");
 			exit(1);
 	}
-	if (ticketType[user] == 3)
+	if (Employees[user].ticketType == 3)
 		if (duration != 2)
 			printf("Ticket is not available...");
 	
-	month[user] = currentMonth;
-	printf("Total is: %d\n", length * fee[ticketType[user]-1][duration]);
+	printf("Total is: %d\n", length * fee[Employees[user].ticketType - 1][duration]);
 }
 
-void edit()
+void edit(int user)
 {
-	int choice;
-	printf("1. Change ticket type\n");
-	printf("2. Change ticket date\n");
-	scanf("%d", &choice);
+	int length, duration, choice;
 
-	printf("%d\n", choice);
-	switch (choice) {
-	case 1:
-		// changetype();
-		break;
-	case 2:
-		// changedate();
-		break;
-	case 3:
-	default:
-		printf("Invalid Menu\n");
-		break;
+	printf("Do you want to change your ticket type? (y/n)");
+	if (getchar()=='y') {
+		printf("1. Open Area\n");
+		printf("2. Covered Area\n");
+		printf("3. Designated Area\n");
+		printf("Enter ticket type (1-3): ");
+		scanf("%d", &(Employees[user].ticketType));
+	}
+	printf("Do you want to change the duration?(y/n)");
+	if (getchar()=='y') {
+		printf("Enter duration (h/d/m): ");
+		scanf("%d %c", &length, &choice);
+		
+		
+		switch(choice)
+		{
+			case 'h':
+				duration = 0;
+				break;
+			case 'd':
+				duration = 1;
+				break;
+			case 'm':
+				duration = 2;
+				break;
+			default:
+				printf("Invalid input\n");
+				exit(1);
+		}
+		if (Employees[user].ticketType == 3)
+			if (duration != 2)
+				printf("Ticket is not available...");
+	}
+	printf("Total is: %d\n", length * fee[Employees[user].ticketType-1][duration]);
+}
+
+void delete(int user) {
+	printf("Are you sure? (y/n)");
+	if (getchar()=='y') {
+		Employees[user].ticketType = 0;
+		printf("deleted.\n");
 	}
 }
+
