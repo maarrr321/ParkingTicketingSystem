@@ -1,15 +1,13 @@
-﻿Build started 9/9/2014 12:27:59 AM.
-Project "C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\ParkingTicketingSystem.vcxproj" on node 2 (Build target(s)).
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Source.c
-  Source.c
-c:\users\marcella\desktop\parkingticketingsystem\parkingticketingsystem\source.c(135): warning C4047: 'function' : 'size_t' differs in levels of indirection from 'void (__cdecl *)(int)'
-c:\users\marcella\desktop\parkingticketingsystem\parkingticketingsystem\source.c(135): warning C4024: 'fwrite' : different types for formal and actual parameter 2
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.lib" /MACHINE:X86 Debug\Source.obj
-  ParkingTicketingSystem.vcxproj -> C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.exe
-Done Building Project "C:\Users\Marcella\Desktop\ParkingTicketingSystem\ParkingTicketingSystem\ParkingTicketingSystem.vcxproj" (Build target(s)).
+﻿Build started 9/9/2014 11:47:57 PM.
+     1>Project "C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\ParkingTicketingSystem.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Source.c
+         Source.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.lib" /MACHINE:X86 Debug\Source.obj
+         ParkingTicketingSystem.vcxproj -> C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\Debug\ParkingTicketingSystem.exe
+     1>Done Building Project "C:\Users\geraldi\Source\Repos\ParkingTicketingSystem\ParkingTicketingSystem\ParkingTicketingSystem.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.69
+Time Elapsed 00:00:00.20
