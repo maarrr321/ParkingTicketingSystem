@@ -31,22 +31,24 @@ void edit(int);
 void delete(int);
 void check(int);
 
-char date[256];
-FILE *file = NULL;
+
+FILE *record;
 
 int main(int argc, char const *argv[])
 {
+	char buffer[SIZE];
 	time_t curtime;
 	struct tm *loctime;
 
-	file = fopen("data.txt", "w+");
 	int user;
 	int choice;
 
 	curtime = time(NULL);
 	loctime = localtime(&curtime);
-	strftime(date, SIZE, "%d %m %Y", loctime);
-	printf("%s\n", date);
+	strftime(buffer, SIZE, "%d-%m-%Y", loctime);
+	printf("%s\n", buffer);
+
+
 
 	printf("Welcome\n");
 	printf("Enter your ID: ");
@@ -82,8 +84,14 @@ int main(int argc, char const *argv[])
 		printf("Invalid Menu\n");
 		break;
 	}
-	
-	fclose(file);
+
+	// disini save.
+	record = fopen("parkingsystem.txt", "w+");
+	if (record == NULL);
+	exit(-1);
+	fprintf(record, "This is the save file data\n");
+	fprintf(record, "%d");
+	fclose(record);
 	return 0;
 }
 
@@ -92,8 +100,8 @@ int main(int argc, char const *argv[])
 
 void buy(int user)
 {
-	int length, duration;
-	char choice;
+	int length, duration, choice;
+	record = fopen("parkingsystem.txt", "w+");
 
 	printf("Purchase Ticket\n");
 	printf("1. Open Area\n");
@@ -102,16 +110,16 @@ void buy(int user)
 	printf("Enter ticket type (1-3): ");
 	scanf("%d", &(Employees[user].ticketType));
 
-	printf("Enter duration (h/d/m): \n");
-	fflush(stdin);
-	scanf("%d %c", &length, &choice);
+	printf("Enter duration (h/d/m): ");
+	scanf("%d %c %d", &length, &choice, &duration);
 
-	printf("%d\n", choice);
+
 	switch (choice)
 	{
 	case 'h':
 		duration = 0;
 		break;
+
 	case 'd':
 		duration = 1;
 		break;
@@ -120,20 +128,23 @@ void buy(int user)
 		break;
 	default:
 		printf("Invalid input\n");
-		return;
+		exit(1);
 	}
 
+	fwrite(&record, buy, NULL, record);
+	fclose(record);
+
 	if (Employees[user].ticketType == 3)
-		if (duration != 2)
-			printf("Ticket is not available...");
+	if (duration != 2)
+		printf("Ticket is not available...");
 
 	printf("Total is: %d\n", length * fee[Employees[user].ticketType - 1][duration]);
-	fprintf(file, "%s %d", date, Employees[user].ticketType - 1);
 }
 
 void edit(int user)
 {
 	int length, duration, choice;
+	record = fopen("parkingsystem.txt", "w+");
 
 	printf("Do you want to change your ticket type? (y/n)");
 	if (getchar() == 'y') {
@@ -169,6 +180,10 @@ void edit(int user)
 			printf("Ticket is not available...");
 	}
 	printf("Total is: %d\n", length * fee[Employees[user].ticketType - 1][duration]);
+	if (record == NULL);
+	exit(-1);
+	fprintf(record, "%d", buy);
+	fclose(record);
 }
 
 void delete(int user) {
